@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="calculatorjs.js"></script>
+    <title>CALCULATOR</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        table{
+            width: 310px; 
+            margin: 50px auto;
+            border: none;
+            border-radius: 10px;
+            padding: 0px 20px 20px; 
+             
+        }
+        button{
+            size: 40px;
+        }
+        input[type=button]{
+            height: 60px;
+            width: 60px;
+            margin: 1px;
+            box-shadow: 2px 2px 2px black;
+        }
+        input[type=button]:hover{
+            background:beige;
+            cursor: pointer;
+        }
+        input[type=text] {
+            height: 40px;
+            width: 259px;
+            text-align: right;
+            font-size: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-shadow: 2px 2px 2px black;
+        }
+        
+    </style>
+</head>
+<body>
+    <br>
+    <H2>CALCULATOR</H2>
+    <table border="1" align="center">
+        <tr>
+            <td><input type="text" id="input" placeholder="0" readonly="readonly">
+            <input type="text" id="hasil"  readonly="readonly"></td>
+        </tr>  
+                
+        <tr>
+            <td>
+            <input type="button" value="+/-" onclick="getOperand('+/-')">
+            <input type="button" value="back" onclick="backspace()">
+            <input type="button" value="( )" onclick="kurung()">
+            <input type="button" value="C" onclick="clearScreen()">
+            <br>
+            
+        
+            <input type="button" value="7" onclick="getNumb(7)">
+            <input type="button" value="8" onclick="getNumb(8)">
+            <input type="button" value="9" onclick="getNumb(9)">
+            <input type="button" value="+" onclick="getOperand('+')">
+            <br>
+            <input type="button" value="4" onclick="getNumb(4)">
+            <input type="button" value="5" onclick="getNumb(5)">
+            <input type="button" value="6" onclick="getNumb(6)">
+            <input type="button" value="-" onclick="getOperand('-')">
+            <br>
+            <input type="button" value="1" onclick="getNumb(1)">
+            <input type="button" value="2" onclick="getNumb(2)">
+            <input type="button" value="3" onclick="getNumb(3)">
+            <input type="button" value="x" onclick="getOperand('*')">
+            <br>
+            <input type="button" value="." onclick="getNumb('.')">
+            <input type="button" value="0" onclick="getNumb(0)">
+           <input type="button" value="/" onclick="getOperand('/')">
+           <input type="button" value="=" onclick="getSum()"></td>
+        </tr>
+
+
+    </table>
+</body>
+</html>
